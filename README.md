@@ -87,6 +87,30 @@ The response can contain private account information.
 These environment variables belong in the application environment, not in the uploaded skill.
 See the [Agent API MCP guide](https://docs.perplexity.ai/docs/agent-api/tools/mcp) for tool allowlists and approval limitations.
 
+## CLI and local MCP
+
+Perplexity Computer uses the hosted connector above and needs no CLI installation.
+For terminal access or a local stdio MCP client, SendIt also publishes [@senditapp/mcp](https://www.npmjs.com/package/@senditapp/mcp).
+The current release is `0.2.1` and includes the `sendit` command and `sendit-mcp` alias.
+
+```bash
+npx --yes --package=@senditapp/mcp@0.2.1 sendit --help
+npx --yes --package=@senditapp/mcp@0.2.1 sendit tools
+```
+
+To launch the local MCP bridge, configure a compatible client with:
+
+```json
+{
+  "command": "npx",
+  "args": ["--yes", "--package=@senditapp/mcp@0.2.1", "sendit", "serve"],
+  "env": { "SENDIT_API_KEY": "YOUR_SENDIT_API_KEY" }
+}
+```
+
+Keep the API key in your client's private environment settings.
+Use the hosted OAuth connector for Perplexity Computer.
+
 ## Build and validate
 
 From this directory, using Node.js 20 or later:
