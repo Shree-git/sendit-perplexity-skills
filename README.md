@@ -23,9 +23,10 @@ For a file import, use the downloads below.
 
 In [Perplexity Computer's Skills interface](https://www.perplexity.ai/computer/skills), choose `Create skill` > `Upload skill` and upload either file:
 
-- [sendit-social-publishing.zip](https://sendit.infiniteappsai.com/integrations/perplexity/sendit-social-publishing.zip)
-- [sendit-social-publishing.md](https://sendit.infiniteappsai.com/integrations/perplexity/sendit-social-publishing.md)
+- [sendit-social-publishing.zip](https://github.com/Shree-git/sendit-perplexity-skills/releases/download/v0.1.0/sendit-social-publishing.zip)
+- [sendit-social-publishing.md](https://github.com/Shree-git/sendit-perplexity-skills/releases/download/v0.1.0/sendit-social-publishing.md)
 
+These versioned files are also mirrored on the [SendIt setup page](https://sendit.infiniteappsai.com/start/perplexity).
 The ZIP has `SKILL.md` at its root.
 The standalone Markdown file contains the same complete instructions and has the required YAML `name` and `description`.
 Both files are below Perplexity's 10 MB upload limit.
