@@ -1,0 +1,25 @@
+name: Validate SendIt Perplexity skill
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm run build
+      - run: unzip -t dist/sendit-social-publishing.zip
+      - run: cd dist && sha256sum --check SHA256SUMS
